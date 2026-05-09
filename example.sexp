@@ -115,6 +115,8 @@
       - toplevel symbol in binder      ✅
       - toplevel symbol in variable    ❌
       - local variable                 ❌
+      - record field                   ❌
+      - toplevel type                  ❌
     - hover
       - local variable                 ✅
       - toplevel variable              ❌
