@@ -2,16 +2,26 @@
 
 Sophia is a statically typed functional language with Lisp syntax and ML-style types, designed as a teaching language that a single person can fully implement.
 
-## Status
+# Status 
 
-This is a personal project with limited bandwidth. I welcome bug reports and will fix them, but I'm not accepting feature requests or pull requests at this time.
+Status: **Solo project**, maintained in spare time. I fix bugs but do **not** accept feature requests. **No PRs** please.
 
-## Contributions
+# Tutorial
 
-**Bug reports are welcome.** Please open an issue with a minimal reproduction.
+```bash
+bun interpreter.js example.sexp
+```
 
-**Pull requests are not accepted.** I'm choosing to keep this codebase small and maintainable by a single person. Adding features, fixing style issues, or refactoring will be politely declined. It's not you — it's a time budget decision.
+```bash
+#  user friendly stack trace
+stack trace: abort
+stack depth: 4
+    at playground.qux example.sexp:476:5
+    at playground.bar example.sexp:471:5
+    at playground.foo example.sexp:485:18
+    at playground.stack_trace example.sexp:500:5
 
+```
 
 ## License
 
