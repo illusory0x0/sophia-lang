@@ -104,19 +104,20 @@
 
   toolchain:
     - interpreter
-        - diagnostic                  ✅
-        - stack trace                 ✅
+        - diagnostic                   ✅
+        - stack trace                  ✅
     - vscode extension
     - completion
-      - module access                 ✅
-      - field access                  ✅
-      - type refine                   ✅
+      - module access                  ✅
+      - field access                   ✅
+      - type refine                    ✅
     - renaming                        
-      - toplevel module               ✅
-      - local variable                ❌
+      - toplevel symbol in binder      ✅
+      - toplevel symbol in variable    ❌
+      - local variable                 ❌
     - hover
-      - local variable                ✅
-      - toplevel variable             ❌
+      - local variable                 ✅
+      - toplevel variable              ❌
     
     - accurate source location for diagnostic ✅
       - e.g. lone delimiter, mismatch delimiter, extra diagnostic family, missing diagnostic family
@@ -489,6 +490,12 @@ Sophia programming language not support any type now, but println accept all typ
   (lambda (unit) (scope
     abort
     unit)))
+
+(doc (record var (name str))
+
+(inductive stlc.typ stlc.var )
+
+(inductive stlc.exp ) )
 
 
 (let main
