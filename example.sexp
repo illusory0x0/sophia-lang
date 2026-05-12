@@ -488,16 +488,32 @@ Sophia programming language not support any type now, but println accept all typ
   (lambda (unit) (playground.foo)))
 (doc ============================================= )
 
+(doc user defined int function )
+(let int.eq 
+  (lambda ((lft int) (rht int) bool)
+    (match (int.cmp lft rht)
+      (equal true)
+      (less true)
+      (greater false))))
+
+(let int.mul.step 
+  (lambda ((lft int) (rht int) int)
+    (scope
+        (let next_lft (int.sub lft 1))
+        (let rslt (int.mul next_lft rht))
+        (int.add rht rslt))))
+
+(let int.mul 
+  (lambda ((lft int) (rht int) int)
+    (match (int.eq lft 0)
+      (true 0)
+      (false (int.mul.step lft rht)))))
+
+(doc ============================================= )
+
 (let foo
   (lambda (unit) (scope
-    abort
     unit)))
-
-(doc (record var (name str))
-
-(inductive stlc.typ stlc.var )
-
-(inductive stlc.exp ) )
 
 
 (let main
